@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
+import gear from './assets/logohorario.svg';
+import logo from './assets/logo.png'
+
 
 function Login() {
+
     const [nome, setNome] = useState('');
+    const [email, setEmaeil] = useState('');
     const [dataNascimento, setDataNascimento] = useState('');
     const [carregando, setCarregando] = useState(false);
     const [mensagem, setMensagem] = useState('');
 
-    const handleLogin = async (e) => {
+    const handleEnviar = async (e) => {
         e.preventDefault();
         setCarregando(true);
 
@@ -17,6 +22,7 @@ function Login() {
         // Criar o objeto que será enviado
         const dadosEnvio = {
             nome,
+            email,
             dataNascimento: dataFormatada,
         };
 
@@ -45,8 +51,14 @@ function Login() {
 
     return (
         <div className="container">
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
+            <h1>Cadastro</h1>
+            <div class="logocard">
+               <img src={logo} className="logo" alt="logo" />
+               <img src={gear} className="gear" alt="logo" />
+
+            </div>
+            
+            <form onSubmit={handleEnviar}>
                 <div className="form-group">
                     <label htmlFor="nome">Nome:</label>
                     <input
@@ -54,6 +66,16 @@ function Login() {
                         id="nome"
                         value={nome}
                         onChange={(e) => setNome(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">E-mail:</label>
+                    <input
+                        type="text"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmaeil(e.target.value)}
                         required
                     />
                 </div>
@@ -68,7 +90,7 @@ function Login() {
                     />
                 </div>
                 <button type="submit" disabled={carregando || !nome || !dataNascimento}>
-                    {carregando ? 'Carregando...' : 'Login'}
+                    {carregando ? 'Carregando...' : 'Enivar'}
                 </button>
                 {mensagem && <div className="mensagem">{mensagem}</div>}
             </form>
