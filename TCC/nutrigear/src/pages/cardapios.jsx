@@ -1,10 +1,10 @@
 import  RecipeReviewCard  from '../components/box/box.jsx';
 
 
-function Pag4() {
-    const msg = "Voce está na pagina 44"
+function Cardapios() {
+    const msg = "Voce está na pagina dos cardápios"
     return(
-        <body>
+        <body>            
             <body>
                 <h1>{msg} </h1>
                 <RecipeReviewCard></RecipeReviewCard>
@@ -15,4 +15,4 @@ function Pag4() {
 };
 
 
-export default Pag4;
+export default Cardapios;

@@ -1,8 +1,8 @@
 import  RecipeReviewCard  from '../components/box/box.jsx';
 
 
-function Pag4() {
-    const msg = "Voce está na pagina 44"
+function Indicacoes() {
+    const msg = "Voce está na pagina 3"
     return(
         <body>
             <body>
@@ -15,4 +15,4 @@ function Pag4() {
 };
 
 
-export default Pag4;
+export default Indicacoes;

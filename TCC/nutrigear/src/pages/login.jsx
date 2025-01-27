@@ -3,7 +3,6 @@ import axios from 'axios';
 //import gear from './assets/logohorario.svg';
 import logo from '../assets/logo.png'
 
-
 function Login() {
 
     const [nome, setNome] = useState('');
@@ -11,7 +10,7 @@ function Login() {
     const [dataNascimento, setDataNascimento] = useState('');
     const [carregando, setCarregando] = useState(false);
     const [mensagem, setMensagem] = useState('');
-
+    
     const handleEnviar = async (e) => {
         e.preventDefault();
         setCarregando(true);

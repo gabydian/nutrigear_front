@@ -1,22 +1,13 @@
-import { useState } from 'react';
-import axios from 'axios';
 //import gear from './assets/logohorario.svg';
-import logo from './assets/logo.png'
 
 function App(){
-    const abertura = 'Seja bem vindo!';
-;
-
+    const msg = 'Seja bem vindo! Voce está na pagina iniciall'
 return (
-    <div className="container">
-        <h1>{abertura}</h1>
-        <div className="logofix">
-           <img src={logo} className="logofixo" width={250} alt="logo" />
-           
-        </div>
-    </div>
-        )
-
-        
+            <div className="App">
+                <body>
+                <h1>{msg} </h1>
+            </body>
+            </div>
+        )        
     }
 export default App;

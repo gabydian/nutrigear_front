@@ -15,10 +15,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/logo.png';
 
 //const pages = ['Artigos', 'Cardápios', 'Indicações', 'Login'];
-const pages = [ {'nome':'Artigos','link':'../pages/pag1.jsx'}, 
-                  {'nome':'Cardápios','link':'../pages/pag2.jsx'}, 
-                  {'nome':'Indicações','link':'../pages/pag3.jsx'}, 
-                  {'nome':'Login','link':'../pages/login.jsx'}]
+const pages = [ {'nome':'Inicio','link':'/'},
+                {'nome':'Artigos','link':'/Artigos'}, 
+                {'nome':'Cardápios','link':'/Cardapios'}, 
+                {'nome':'Indicações','link':'/Indicacoes'}, 
+                {'nome':'Login','link':'/login'}
+                
+              ]
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -48,7 +51,7 @@ function ResponsiveAppBar() {
              variant="h6"
              noWrap
              component="a"
-             href='home'
+             href='/'
              sx={{
                mr: 2,
                display: { xs: 'none', md: 'flex' },
