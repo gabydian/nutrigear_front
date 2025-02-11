@@ -36,7 +36,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expandedIndex, setExpandedIndex] = React.useState(false);
   const conteudos = [
     {'Avatar':'L', 'Autor':'Leonardo', 'title':'Meu Title1','msg':'Mensagem por extenso, o conteúdo propriamente dito',
        'imagem': '../assets/artigos/img1.jpg'},
@@ -44,14 +44,14 @@ export default function RecipeReviewCard() {
       'imagem':'../assets/artigos/img2.jpg'},
 
   ]
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const handleExpandClick = (index) => {
+    setExpandedIndex(!expandedIndex === index ? null : index);
   };
 
   return (
     <div>
     {conteudos.map((conteudo, index) => (  
-    <Card key={index} sx={{ maxWidth: 345 }}> 
+    <Card key={index} sx={{ maxWidth: 345, marginBottom: 2 }}> 
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[800] }} aria-label="recipe">
@@ -69,7 +69,7 @@ export default function RecipeReviewCard() {
         component="img"
         height="194"
         image={conteudo.imagem}
-        alt={conteudo.index}
+        alt={`Imagem de ${conteudo.Autor}`}
       />
       <CardContent>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -82,19 +82,19 @@ export default function RecipeReviewCard() {
         <IconButton aria-label="share">
         </IconButton>
         <ExpandMore
-          expand={expanded}
           onClick={handleExpandClick}
-          aria-expanded={expanded}
+          aria-expanded={expandedIndex === index}
           aria-label="show more"
-        >{conteudo.msg}
+        >
+          {expandedIndex === index ? "Recolher" : "Expandir"}
         </ExpandMore>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expandedIndex === index} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography sx={{ marginBottom: 2 }}>
 
           </Typography>
-         
+         Aqui se pode encontrar mais detalhes sobre {conteudo.msg}
         </CardContent>
       </Collapse>
     </Card>

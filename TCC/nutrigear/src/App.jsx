@@ -1,7 +1,7 @@
 //import gear from './assets/logohorario.svg';
 
 function App(){
-    const msg = 'Seja bem vindo! Voce está na pagina iniciall'
+    const msg = 'Seja bem vindo! Voce está na pagina inicial'
 return (
             <div className="App">
                 <body>

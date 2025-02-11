@@ -2,7 +2,7 @@ import  RecipeReviewCard  from '../components/box/box.jsx';
 
 
 function Indicacoes() {
-    const msg = "Voce está na pagina 3"
+    const msg = "Voce está na pagina de indicações";
     return(
         <body>
             <body>
