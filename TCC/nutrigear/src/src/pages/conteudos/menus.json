@@ -1,0 +1,27 @@
+
+    [
+      {
+      "avatar": "X",
+      "title": "Título do Menu 1",
+      "subheader": "Data do Menu 1",
+      "image": "../../src/assets/menus/menu01.jpeg",
+      "shortDescription": "Descrição curta do Menu 1",
+      "details": "Conteúdo detalhado do Menu 1"
+    },
+    {
+      "avatar": "Y",
+      "title": "Título do Menu 2 ",
+      "subheader": "30/09/2024",
+      "image": "../../src/assets/menus/menu02.jpeg",
+      "shortDescription": "Descrição curta do MenuMenu 2",
+      "details": "Conteúdo detalhado do Menu 2: Esta opção lhe fará lamber os beiços independente da sobrevida desejafa "
+      },
+      {
+      "avatar": "Z",
+      "title": "Título do Menu 3",
+      "subheader": "Data do Menu 3",
+      "image": "../../src/assets/menus/menu03.jpeg",
+      "shortDescription": "Descrição curta do Menu 3",
+      "details": "Conteúdo detalhado do Menu 3"
+    }
+  ]

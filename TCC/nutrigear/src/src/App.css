@@ -1,0 +1,87 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logocard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  
+
+.gear  {
+  padding: 20px;
+  left: -10px;
+  top: -20px;
+  width: 50px;
+  left: -5px;
+  will-change: filter;
+}
+.gear:hover {
+  filter: drop-shadow(0 0 20px #030636);
+}
+
+@keyframes gear-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gear {
+    animation: gear-spin infinite 20s linear;
+  }
+}
+
+.logofix {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 60px;height: 10em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logofix:hover {
+  filter: drop-shadow(0 0 20px #353535);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input  
+ {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0px 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.logofixo {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
