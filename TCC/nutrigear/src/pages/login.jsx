@@ -7,9 +7,20 @@ function Login() {
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
     const [dataNascimento, setDataNascimento] = useState('');
+    const [restricaoAlimentar, setRestricaoAlimentar] = useState([])
     const [carregando, setCarregando] = useState(false);
     const [mensagem, setMensagem] = useState('');
+
+    const handleRestricaoAlimentarChange = (e) => {
+        const { value, checked } = e.target;
+        if (checked) {
+            setRestricaoAlimentar([...restricaoAlimentar, value]);
+        } else {
+            setRestricaoAlimentar(restricaoAlimentar.filter((item) => item !== value));
+        }
+    };
     
     const handleEnviar = async (e) => {
         e.preventDefault();
@@ -23,13 +34,15 @@ function Login() {
             nome,
             email,
             dataNascimento: dataFormatada,
+            senha,
+            restricaoAlimentar: restricaoAlimentar.join(', ')
         };
 
         // Logar o objeto JSON
         console.log('Dados enviados:', JSON.stringify(dadosEnvio, null, 2));
-
+        //postman http://localhost:8080/pessoas
         try {
-            const response = await axios.post('http://localhost:8080/acolhido', dadosEnvio);
+            const response = await axios.post('http://localhost:8080/pessoas', dadosEnvio);
             const { data } = response;
             setMensagem(data.mensagem);
         } catch (error) {
@@ -78,6 +91,16 @@ function Login() {
                     />
                 </div>
                 <div className="form-group">
+                    <label htmlFor="senha">Senha:</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="form-group">
                     <label htmlFor="dataNascimento">Data de Nascimento:</label>
                     <input
                         type="date"
@@ -86,6 +109,36 @@ function Login() {
                         onChange={(e) => setDataNascimento(e.target.value)}
                         required
                     />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="restricaoAlimentar">Restrição Alimentar:</label>
+                    <div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Glúten"
+                                checked={restricaoAlimentar.includes("Glúten")}
+                                onChange={handleRestricaoAlimentarChange}
+                            /> Glúten
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Lactose"
+                                checked={restricaoAlimentar.includes("Lactose")}
+                                onChange={handleRestricaoAlimentarChange}
+                            /> Lactose
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="Vegetariano"
+                                checked={restricaoAlimentar.includes("Vegetariano")}
+                                onChange={handleRestricaoAlimentarChange}
+                            /> Vegetariano
+                        </label>
+                        {/* Adicione mais opções de restrições alimentares aqui */}
+                    </div>
                 </div>
                 <button type="submit" disabled={carregando || !nome || !dataNascimento}>
                     {carregando ? 'Carregando...' : 'Enivar'}

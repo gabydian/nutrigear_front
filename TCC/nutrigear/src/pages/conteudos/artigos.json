@@ -1,0 +1,27 @@
+
+    [
+      {
+      "avatar": "A",
+      "title": "Título do Artigo 1",
+      "subheader": "Data do Artigo 1",
+      "image": "../../src/assets/artigos/img1.jpg",
+      "shortDescription": "Descrição curta do artigo 1",
+      "details": "Conteúdo detalhado do artigo 1"
+    },
+    {
+      "avatar": "C",
+      "title": "Título do Artigo ",
+      "subheader": "30/09/2024",
+      "image": "../../src/assets/artigos/img1.jpg",
+      "shortDescription": "Descrição curta do artigo 1",
+      "details": "Conteúdo detalhado do artigo 1"
+      },
+      {
+      "avatar": "B",
+      "title": "Título do Artigo 2",
+      "subheader": "Data do Artigo 2",
+      "image": "../../src/assets/artigos/img2.jpg",
+      "shortDescription": "Descrição curta do artigo 2",
+      "details": "Conteúdo detalhado do artigo 2"
+    }
+  ]

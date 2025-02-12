@@ -4,7 +4,7 @@ import App from './App.jsx'
 import Login from './pages/login.jsx'
 import Artigos from './pages/artigos.jsx'
 import Cardapios from './pages/cardapios.jsx'
-import Indicacoes from './pages/indicações.jsx'
+import Menus from './pages/menus.jsx'
 import Pag4 from './pages/pag4.jsx'
 
 
@@ -27,8 +27,8 @@ function Rotas() {
             element: <Cardapios/>
         },
         {
-            path: "/Indicacoes",
-            element: <Indicacoes/>
+            path: "/Menus",
+            element: <Menus/>
         },
         {
             path: "/Pag4",

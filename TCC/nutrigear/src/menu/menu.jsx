@@ -18,7 +18,7 @@ import Logo from '../assets/logo.png';
 const pages = [ {'nome':'Inicio','link':'/'},
                 {'nome':'Artigos','link':'/Artigos'}, 
                 {'nome':'Cardápios','link':'/Cardapios'}, 
-                {'nome':'Indicações','link':'/Indicacoes'}, 
+                {'nome':'Menu','link':'/Menus'}, 
                 {'nome':'Login','link':'/login'}
                 
               ]
