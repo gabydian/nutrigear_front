@@ -1,0 +1,30 @@
+
+    [
+      {
+      "pessoa": "AIRTON",
+      "titulo": "Título do Artigo 1",
+      "dataCriacao": "10/12/2019",
+      "imagem": "../../src/assets/artigos/img1.jpg",
+      "descricao": "Descrição curta do artigo 1",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do artigo 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+    },
+    {
+      "pessoa": "C",
+      "titulo": "Título do Artigo 2",
+      "dataCriacao": "30/09/2024",
+      "imagem": "../../src/assets/artigos/img2.jpg",
+      "descricao": "Descrição curta do artigo 2",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do artigo 2 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+      },
+      {
+      "pessoa": "B",
+      "titulo": "Título do Artigo 3",
+      "dataCriacao": "10/12/2021",
+      "imagem": "../../src/assets/artigos/img3.jpg",
+      "descricao": "Descrição curta do artigo 3",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do artigo 3 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+    }
+  ]

@@ -1,0 +1,30 @@
+
+    [
+      {
+      "pessoa": "X",
+      "titulo": "Título do Menu 1",
+      "dataCriacao": "15/02/2022",
+      "imagem": "../../src/assets/menus/menu01.jpeg",
+      "descricao": "Descrição curta do Menu 1",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do Menu 1"
+    },
+    {
+      "pessoa": "Y",
+      "titulo": "Título do Menu 2 ",
+      "dataCriacao": "30/09/2024",
+      "imagem": "../../src/assets/menus/menu02.jpeg",
+      "descricao": "Descrição curta do MenuMenu 2",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do Menu 2: Esta opção lhe fará lamber os beiços independente da sobrevida desejafa "
+      },
+      {
+      "pessoa": "Z",
+      "titulo": "Título do Menu 3",
+      "dataCriacao": "28/14/2024",
+      "imagem": "../../src/assets/menus/menu03.jpeg",
+      "descricao": "Descrição curta do Menu 3",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do Menu 3"
+    }
+  ]
