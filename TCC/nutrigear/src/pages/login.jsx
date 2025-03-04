@@ -5,19 +5,14 @@ import engrenagem from  '../assets/logo_Gear.svg'
 
 
 function Login() {
-
-    const Nome = localStorage.getItem('Nome');
-    const logado = localStorage.getItem('usuarioCadastrado');
-
-
-
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [dataNascimento, setDataNascimento] = useState('');
-    const [restricaoAlimentar, setRestricaoAlimentar] = useState([])
+    const [restricaoAlimentar, setRestricaoAlimentar] = useState([]);
     const [carregando, setCarregando] = useState(false);
     const [mensagem, setMensagem] = useState('');
+
 
     const handleRestricaoAlimentarChange = (e) => {
         const { value, checked } = e.target;
@@ -47,13 +42,6 @@ function Login() {
         // Logar o objeto JSON
         console.log('Dados enviados:', JSON.stringify(dadosEnvio, null, 2));
 
-
-        localStorage.setItem('usuarioCadastrado','true');
-        localStorage.setItem('Nome',nome);
-        localStorage.setItem('Restricao',restricaoAlimentar);
-        window.location.href = '/Menus';
-
-
         //postman http://localhost:8080/pessoas
         try {
             const response = await axios.post('http://localhost:8080/pessoas', dadosEnvio);
@@ -61,7 +49,14 @@ function Login() {
             setMensagem(data.mensagem);
 
             localStorage.setItem('usuarioCadastrado','true');
+            localStorage.setItem('Nome',nome);
+            localStorage.setItem('Restricao',restricaoAlimentar);
             window.location.href = '/Menus';
+
+            localStorage.setItem('usuarioCadastrado','true');
+            window.location.href = '/Menus';
+            console.log('Cadastro realizado com sucesso:', JSON.stringify(data, null, 2));
+            
         } catch (error) {
             console.error('Houve um erro na requisição!', error);
             if (error.response) {
@@ -134,24 +129,24 @@ function Login() {
                         <label>
                             <input
                                 type="checkbox"
-                                value="Glúten"
-                                checked={restricaoAlimentar.includes("Glúten")}
+                                value="gluten"
+                                checked={restricaoAlimentar.includes("gluten")}
                                 onChange={handleRestricaoAlimentarChange}
                             /> Glúten
                         </label>
                         <label>
                             <input
                                 type="checkbox"
-                                value="Lactose"
-                                checked={restricaoAlimentar.includes("Lactose")}
+                                value="lactose"
+                                checked={restricaoAlimentar.includes("lactose")}
                                 onChange={handleRestricaoAlimentarChange}
                             /> Lactose
                         </label>
                         <label>
                             <input
                                 type="checkbox"
-                                value="Vegetariano"
-                                checked={restricaoAlimentar.includes("Vegetariano")}
+                                value="vegetariano"
+                                checked={restricaoAlimentar.includes("vegetariano")}
                                 onChange={handleRestricaoAlimentarChange}
                             /> Vegetariano
                         </label>

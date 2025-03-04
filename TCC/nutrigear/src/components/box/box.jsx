@@ -10,14 +10,18 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
-    })(({ theme }) => ({
-            marginLeft: 'auto',
-            transition: theme.transitions.create('transform', {
-                duration: theme.transitions.duration.shortest,
+})(({ theme }) => ({
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
   }),
   variants: [
     {
@@ -35,70 +39,76 @@ const ExpandMore = styled((props) => {
   ],
 }));
 
-export default function RecipeReviewCard() {
-  const [expandedIndex, setExpandedIndex] = React.useState(false);
-  const conteudos = [
-    {'Avatar':'L', 'Autor':'Leonardo', 'title':'Meu Title1','msg':'Mensagem por extenso, o conteúdo propriamente dito',
-       'imagem': '../assets/artigos/img1.jpg'},
-    {'Avatar':'J', 'Autor':'João','title':'Meu Title2','msg':'Mensagem por extenso, o conteúdo propriamente dito', 
-      'imagem':'../assets/artigos/img2.jpg'},
+export default function RecipeReviewCard({ data }) {
+  const [expandedStates, setExpandedStates] = React.useState(
+    data ? data.map(() => false) : []
+  );
 
-  ]
   const handleExpandClick = (index) => {
-    setExpandedIndex(!expandedIndex === index ? null : index);
+    setExpandedStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = !newStates[index];
+      return newStates;
+    });
   };
+
+  if (!data) {
+    return <div>No data available.</div>; // Lidando com dados vazios ou nulos
+  }
 
   return (
     <div>
-    {conteudos.map((conteudo, index) => (  
-    <Card key={index} sx={{ maxWidth: 345, marginBottom: 2 }}> 
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[800] }} aria-label="recipe">
-            {conteudo.Avatar}
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-          </IconButton>
-        }
-        title={conteudo.Autor}
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image={conteudo.imagem}
-        alt={`Imagem de ${conteudo.Autor}`}
-      />
-      <CardContent>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {conteudo.msg}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-        </IconButton>
-        <IconButton aria-label="share">
-        </IconButton>
-        <ExpandMore
-          onClick={handleExpandClick}
-          aria-expanded={expandedIndex === index}
-          aria-label="show more"
-        >
-          {expandedIndex === index ? "Recolher" : "Expandir"}
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expandedIndex === index} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography sx={{ marginBottom: 2 }}>
-
-          </Typography>
-         Aqui se pode encontrar mais detalhes sobre {conteudo.msg}
-        </CardContent>
-      </Collapse>
-    </Card>
-    ))}
+      {data.map((item, index) => (
+        <Card key={index} sx={{ maxWidth: 345, marginBottom: 2 }}>
+          <CardHeader
+            pessoa={
+              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                
+                {item.pessoa || 'C'} {/* Exibe o avatar ou 'C' do Convidado */}
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title={item.titulo}
+            subheader={item.dataCriacao}
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image={item.imagem}
+            alt={item.title}
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              {item.descricao}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+            <ExpandMore
+              expand={expandedStates[index]}
+              onClick={() => handleExpandClick(index)} // Passa o índice
+              aria-expanded={expandedStates[index]}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </ExpandMore>
+          </CardActions>
+          <Collapse in={expandedStates[index]} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography paragraph>{item.texto}</Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
+      ))}
     </div>
   );
 }

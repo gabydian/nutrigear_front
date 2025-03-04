@@ -2,29 +2,29 @@
     [
       {
       "pessoa": "A",
-      "titulo": "Título do Receita 1",
-      "dataCriacao": "Data do Receita 1",
+      "titulo": "Título do Cardapio 1",
+      "dataCriacao": "10/05/2025",
       "imagem": "../../src/assets/cardapios/cardapio01.jpg",
-      "descricao": "Descrição curta do artigo 1",
+      "descricao": "Descrição curta do Cardapio 1",
       "observacoes":"",
-      "texto":  "Conteúdo detalhado do artigo 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+      "texto":  "Conteúdo detalhado do Cardapio 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
     },
     {   
       "pessoa": "C",
-      "titulo": "Título do Receita 2",
+      "titulo": "Título do Cardapio 2",
       "dataCriacao": "30/09/2024",
       "imagem": "../../src/assets/cardapios/cardapio02.jpg",
-      "descricao": "Descrição curta do artigo 1",
+      "descricao": "Descrição curta do Cardapio 1",
       "observacoes":"",
-      "texto": "Conteúdo detalhado do artigo 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+      "texto": "Conteúdo detalhado do Cardapio 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
       },
       {
       "pessoa": "B",
-      "titulo": "Título do Receita 3",
-      "dataCriacao": "Data do Receita 2",
+      "titulo": "Título do Cardapio 3",
+      "dataCriacao": "20/03/2023",
       "imagem": "../../src/assets/cardapios/cardapio03.jpg",
-      "descricao": "Descrição curta do artigo 2",
+      "descricao": "Descrição curta do Cardapio 2",
       "observacoes":"",
-      "texto": "Conteúdo detalhado do artigo 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
+      "texto": "Conteúdo detalhado do Cardapio 1 Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker."
     }
   ]

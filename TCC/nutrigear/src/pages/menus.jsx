@@ -10,19 +10,23 @@ function Menus() {
     const navigate = useNavigate();
 
     const Nome = localStorage.getItem('Nome');
-    const restricaoAlimentar = localStorage.getItem('Restricao');
+    const restricaoAlimentarUsuario = localStorage.getItem('Restricao');
 
 
     useEffect(() => {
       const usuarioCadastrado = localStorage.getItem('usuarioCadastrado');
 
       if (usuarioCadastrado === 'true') {
-        setData(ListaMenus); // Atribui os dados diretamente
+        const menusFiltrados = ListaMenus.filter(menu => {
+          return menu.restricaoAlimentar.toLowerCase() === restricaoAlimentarUsuario.toLowerCase();
+      });
+
+        setData(menusFiltrados); // Atribui os dados diretamente
         setLoading(false); // Define loading como false após atribuir os dados
       } else {
         navigate('/login');
       }
-    }, [navigate]); // Executa apenas uma vez na montagem do componente
+    }, [navigate, restricaoAlimentarUsuario]); // Executa apenas uma vez na montagem do componente
   
     if (loading) {
       return <div>Loading...</div>;
@@ -31,7 +35,7 @@ function Menus() {
     return (
       <div>
         <h1>MENUS de {Nome} </h1>
-      <h3>segue menus para {restricaoAlimentar}  </h3>
+      <h3>segue menus para {restricaoAlimentarUsuario}  </h3>
         <RecipeReviewCard data={data} />
       </div>
     );
