@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
-import Login from './pages/login.jsx'
+import Cadastro from './pages/cadastro.jsx'
 import Artigos from './pages/artigos.jsx'
 import Cardapios from './pages/cardapios.jsx'
-import Indicacoes from './pages/indicações.jsx'
-import Pag4 from './pages/pag4.jsx'
+import Menus from './pages/menus.jsx'
+import Login from './pages/login.jsx'
 
 
 function Rotas() {
@@ -15,8 +15,8 @@ function Rotas() {
             element: <App/>
         },
         {
-            path: "/login",
-            element: <Login/>
+            path: "/Cadastro",
+            element: <Cadastro/>
         },
         {
             path: "/Artigos",
@@ -27,12 +27,12 @@ function Rotas() {
             element: <Cardapios/>
         },
         {
-            path: "/Indicacoes",
-            element: <Indicacoes/>
+            path: "/Menus",
+            element: <Menus/>
         },
         {
-            path: "/Pag4",
-            element: <Pag4/>
+            path: "/Login",
+            element: <Login/>
         },
         ])
 
