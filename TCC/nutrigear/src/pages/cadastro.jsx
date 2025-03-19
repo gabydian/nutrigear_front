@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import logo from '../assets/logo.png'
 import engrenagem from  '../assets/logo_Gear.svg'
-
+import './cadastro.css'
 
 function Cadastro() {
     const [nome, setNome] = useState('');
@@ -12,7 +12,7 @@ function Cadastro() {
     const [restricaoAlimentar, setRestricaoAlimentar] = useState([]);
     const [carregando, setCarregando] = useState(false);
     const [mensagem, setMensagem] = useState('');
-
+    const [mensagemSucesso, setMensagemSucesso] = useState(''); // Nova variável de estado
 
     const handleRestricaoAlimentarChange = (e) => {
         const { value, checked } = e.target;
@@ -44,9 +44,14 @@ function Cadastro() {
 
         //postman http://localhost:8080/pessoas
         try {
-            const response = await axios.post('http://localhost:8080/pessoas', dadosEnvio);
+            const response = await axios.post('http://192.168.0.102:8080/pessoas', dadosEnvio);
+            //const response = await axios.post('http://10.0.1.124:5173/pessoas', dadosEnvio);
+
             const { data } = response;
             setMensagem(data.mensagem);
+
+            setMensagemSucesso('Cadastro realizado com sucesso!'); // Armazena a mensagem de sucesso
+            setMensagem(''); // Limpa mensagens de erro anteriores
 
             localStorage.setItem('usuarioCadastrado','true');
             localStorage.setItem('Nome',nome);
@@ -73,13 +78,21 @@ function Cadastro() {
         }
     };
 
+    useEffect(() => {
+        if (mensagemSucesso) {
+            alert(mensagemSucesso); // Exibe o alerta
+            setMensagemSucesso(''); // Limpa a mensagem de sucesso após exibir o alerta
+        }
+    }, [mensagemSucesso]);
+
     return (
         <div className="container">
             <h1>Cadastro</h1>
+
             <div className="logocard">
-               <img src={logo} className="logo" width={150} alt="logo" />
-               <img src={engrenagem} className='logo' width={150} alt="logo" />
-               
+               <h1>NUTRIGEAR</h1>
+               <img src={engrenagem} className='logo' alt="logo" />
+               <img src={engrenagem} className='logo-invertido' alt="logo" />               
             </div>
             
             <form onSubmit={handleEnviar}>

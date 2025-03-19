@@ -28,6 +28,26 @@
       "descricao": "Descrição curta do Menu 3",
       "observacoes":"",
       "texto": "Conteúdo detalhado do Menu 3",
+      "restricaoAlimentar": "lactose, vegetariano"
+    },
+      {
+      "pessoa": "Z",
+      "titulo": "Título do Menu 3",
+      "dataCriacao": "28/14/2024",
+      "imagem": "../../src/assets/menus/menu03.jpeg",
+      "descricao": "Descrição curta do Menu 3",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do Menu 3",
+      "restricaoAlimentar": "gluten"
+    },
+      {
+      "pessoa": "Z",
+      "titulo": "Título do Menu 3",
+      "dataCriacao": "28/14/2024",
+      "imagem": "../../src/assets/menus/menu03.jpeg",
+      "descricao": "Descrição curta do Menu 3",
+      "observacoes":"",
+      "texto": "Conteúdo detalhado do Menu 3",
       "restricaoAlimentar": "lactose"
     }
   ]

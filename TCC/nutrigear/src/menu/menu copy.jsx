@@ -22,8 +22,11 @@ const pages = [ {'nome':'Inicio','link':'/'},
                 {'nome':'Cadastro','link':'/cadastro'}
                 
               ]
-const settingsin = ['Profile', 'Account', 'Logout'];
-const settingsout = ['login'];
+
+const settingsin = [
+  { nome: 'Profile', link: '/profile' },
+  { nome: 'Logout', link: '/login' },	
+  ];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

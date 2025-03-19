@@ -2,8 +2,9 @@
 import { useState, useEffect } from 'react';
 import RecipeReviewCard from '../components/box/box';
 import ListaArtigos from './conteudos/cardapios.json'; // Importação correta
+import AlimentosTable from '../components/table.jsx';
 
-function Artigos() {
+function Cardapios() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -20,8 +21,11 @@ function Artigos() {
     <div>
       <h1>CARDAPIOS</h1>
       <RecipeReviewCard data={data} />
+
+      <h1>TABELA DE CONTEÚDOS ALIMENTARES</h1>
+      <AlimentosTable />
     </div>
   );
 }
 
-export default Artigos;
+export default Cardapios;

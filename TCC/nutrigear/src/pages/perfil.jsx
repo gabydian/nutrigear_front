@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import ListaMenus from './conteudos/menus.json'; // Importação correta
 
 
-function Menus() {
+function Perfil() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ function Menus() {
         setData(menusFiltrados); // Atribui os dados diretamente
         setLoading(false); // Define loading como false após atribuir os dados
       } else {
-        navigate('/logar');
+        navigate('/login');
       }
     }, [navigate, restricaoAlimentarUsuario]); // Executa apenas uma vez na montagem do componente
   
@@ -34,11 +34,13 @@ function Menus() {
   
     return (
       <div>
-        <h1>MENUS de {Nome} </h1>
-      <h3>segue menus para {restricaoAlimentarUsuario}  </h3>
+        <h1>INFORMAÇÕES DO SEU PERFIL  </h1>
+        <h2>Nome: {Nome} </h2>
+        <h3>Restrição alimentar: {restricaoAlimentarUsuario}  </h3>
         <RecipeReviewCard data={data} />
+        <a href="editar" >Editar suas informações </a> 
       </div>
     );
   }
 
-  export default Menus;
+  export default Perfil;

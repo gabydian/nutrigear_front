@@ -16,7 +16,9 @@ function Login() {
         setCarregando(true);
 
         try {
-            const response = await axios.post('http://localhost:8080/pessoas', {
+            const response = await axios.post('http://192.168.0.102:8080/logar', {
+            //const response = await axios.post('http://10.0.1.132:5173/logar', {
+
                 email,
                 senha,
             });
@@ -45,8 +47,10 @@ function Login() {
         <div className="container">
             <h1>Login</h1>
             <div className="logocard">
-                <img src={logo} className="logo" width={150} alt="logo" />
-                <img src={engrenagem} className="logo" width={150} alt="logo" />
+                <img src={logo} className="logoNutri" width={150} alt="logo" />
+                <img src={engrenagem} className="logo" alt="logo" />
+                <img src={engrenagem} className='logo-invertido' alt="logo" />
+                
             </div>
 
             <form onSubmit={handleLogin}>
